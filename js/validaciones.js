@@ -16,7 +16,7 @@ export function valida(input){
 const tipoDeErrores = [
     'valueMissing',
     'typeMismatch',
-    'patterMismatch',
+    'patternMismatch',
     'customError'
 ]
 
@@ -30,11 +30,27 @@ const mensajeDeError = {
     },
     password: {
         valueMissing: 'Este campo contraseña no puede estar vacio',
-        patterMismatch: 'Al menos 6 caracteres, máximo 12, debe contener una letra , una letra minuscula, un número y no puede contener caracteres especiales.',
+        patternMismatch: 'Al menos 6 caracteres, máximo 12, debe contener una letra , una letra minuscula, un número y no puede contener caracteres especiales.',
     },
     nacimiento:{
         valueMissing: 'Este campo no puede estar vacio',
         customError: 'Debes tener más de 18 años'
+    },
+    numero:{
+        valueMissing: 'Este campo no puede estar vacio',
+        patternMismatch: 'El formato requerido es XXXXXXXXXX 10 números'
+    },
+    direccion:{
+        valueMissing: 'Este campo no puede estar vacio',
+        patternMismatch: 'La direccion debe contener de 10 a 40 caracteres'
+    },
+    ciudad:{
+        valueMissing: 'Este campo no puede estar vacio',
+        patternMismatch: 'La ciudad debe contener de 10 a 40 caracteres'
+    },
+    estado:{
+        valueMissing: 'Este campo no puede estar vacio',
+        patternMismatch: 'El estado debe contener de 10 a 40 caracteres'
     }
 }
 
