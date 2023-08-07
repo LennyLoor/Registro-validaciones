@@ -24,17 +24,18 @@
                 <fieldset>
                     <legend class="form__label">Información básica</legend>
                     <div class="input-container">
-                        <input name="name" id="name" class="input" type="text" placeholder="Nombre" required>
+                        <input name="name" id="name" class="input" type="text" placeholder="Nombre" data-tipo="nombre" required>
                         <label class="input-label" for="name">Nombre</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
-                        <input name="email" id="email" class="input" type="email" placeholder="Email" required>
+                        <input name="email" id="email" class="input" type="email" placeholder="Email" data-tipo="email" required>
                         <label class="input-label" for="email">Email</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
-                        <input name="password" id="password" class="input" type="password" placeholder="Contraseña" required minlength="6" maxlength="12">
+                        <input name="password" id="password" class="input" type="password" placeholder="Contraseña"  
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ @$!%*?&]).{6,12}$" data-tipo="password" title="Al menos 6 caracteres, máximo 12, debe contener una letra , una letra minuscula, un número y no puede contener caracteres especiales." required>
                         <label class="input-label" for="password">Contraseña</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
@@ -42,7 +43,7 @@
                 <fieldset>
                     <legend class="form__label">Información personal</legend>
                     <div class="input-container">
-                        <input name="birth" id="birth" class="input" type="text" placeholder="Fecha de nacimento">
+                        <input name="birth" id="birth" class="input" type="date" placeholder="Fecha de nacimento" data-tipo="nacimiento" required>
                         <label class="input-label" for="birth">Fecha de nacimiento</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
@@ -74,5 +75,6 @@
             </form>
         </section>
     </main>
+    <script src="./js/app.js" type="module"></script>
 </body>
 </html>
